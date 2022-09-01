@@ -2,6 +2,8 @@
     "enabled": true,
     "timezone": "America/New_York",
     "baseBranches": ["release/2.0.0", "release/3.0.0"],
+    "rebaseStalePrs": true,
+    "schedule": ["after 6pm and before 5am every weekday"],
     "dependencyDashboard": true,
     "commitMessageSuffix": "[ci-skip]",
     "platform": "github",
