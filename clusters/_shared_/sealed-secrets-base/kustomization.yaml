@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: kube-system
+resources:
+  - release.yaml
+
+generatorOptions:
+  # labels to add to all generated resources
+  labels:
+    sealedsecrets.bitnami.com/sealed-secrets-key: active
+#  annotations:
+#    kubectl.kubernetes.io/last-applied-configuration: "removed-by-flux"
+  # disableNameSuffixHash is true disables the default behavior of adding a
+  # suffix to the names of generated resources that is a hash of
+  # the resource contents.
+  disableNameSuffixHash: true
+
+secretGenerator:
+- name: mycustomkeys
+  files:
+    - tls.crt
+    - tls.key
+  type: "kubernetes.io/tls"

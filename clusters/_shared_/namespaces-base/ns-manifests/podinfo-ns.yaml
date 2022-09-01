@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: podinfo
+#  labels:
+#    admission.gatekeeper.sh/ignore: "cluster-podinfo"
+---

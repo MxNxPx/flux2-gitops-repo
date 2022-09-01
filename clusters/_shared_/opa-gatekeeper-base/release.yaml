@@ -1,0 +1,38 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: opa-gatekeeper
+spec:
+  releaseName: opa-gatekeeper
+  chart:
+    spec:
+      chart: gatekeeper
+      sourceRef:
+        kind: HelmRepository
+        name: gatekeeper
+        namespace: flux-system
+      version: "3.6.0"
+  interval: 0h5m0s
+  install:
+    replace: true
+    remediation:
+      retries: 3
+    crds: CreateReplace
+  upgrade:
+    remediation:
+      retries: 3
+    crds: CreateReplace
+    cleanupOnFail: true
+  values:
+    postInstall:
+      labelNamespace:
+        enabled: true
+      controllerManager:
+        exemptNamespaces:
+          - flux-system
+          - kube-system
+          - kube-node-lease
+          - kube-public
+          - default
+          - nginx
+          - local-storage-path
