@@ -1,6 +1,7 @@
 {
     "enabled": true,
     "timezone": "America/New_York",
+    "baseBranches": ["release"]
     "dependencyDashboard": true,
     "commitMessageSuffix": "[ci-skip]",
     "platform": "github",
