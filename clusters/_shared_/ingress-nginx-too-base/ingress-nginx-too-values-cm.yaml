@@ -1,4 +1,0 @@
-controller:
-  ## Name of the ingress class to route through this controller
-  ##
-  ingressClass: nginx-too
