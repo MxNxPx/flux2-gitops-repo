@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "timezone": "America/New_York",
-    "baseBranches": ["release"],
+    "baseBranches": ["release/2.0.0", "release/3.0.0"],
     "dependencyDashboard": true,
     "commitMessageSuffix": "[ci-skip]",
     "platform": "github",
