@@ -3,7 +3,7 @@
     "timezone": "America/New_York",
     "baseBranches": ["release/2.0.0", "release/3.0.0"],
     "rebaseStalePrs": true,
-    "schedule": ["after 9pm and before 6am every weekday"],
+    //"schedule": ["after 9pm and before 6am every weekday"],
     "dependencyDashboard": true,
     "username": "renovatebot-github-app[bot]",
     "gitAuthor": "renovatebot-github-app <234441+renovatebot-github-app[bot]@users.noreply.github.com>",   
