@@ -6,12 +6,13 @@ spec:
   releaseName: kured
   chart:
     spec:
+      # renovate: registryUrl=https://weaveworks.github.io/kured 
       chart: kured
+      version: 2.4.3
       sourceRef:
         kind: HelmRepository
         name: kured
         namespace: flux-system
-      version: "2.4.3"
   interval: 0h5m0s
   install:
     remediation:
