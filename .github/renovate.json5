@@ -2,6 +2,8 @@
     "enabled": true,
     "timezone": "America/New_York",
     "dependencyDashboard": true,
+    "username": "renovatebot-github-app[bot]",
+    "gitAuthor": "renovatebot-github-app <234441+renovatebot-github-app[bot]@users.noreply.github.com>",   
     "commitMessageSuffix": "[ci-skip]",
     "platform": "github",
     "onboarding": false,
