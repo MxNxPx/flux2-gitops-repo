@@ -2,6 +2,7 @@
     "enabled": true,
     "timezone": "America/New_York",
     "baseBranches": ["release/2.0.0", "release/3.0.0"],
+    "repositories": ["MxNxPx/flux2-gitops-repo"],
     "rebaseStalePrs": true,
     //"schedule": ["after 9pm and before 6am every weekday"],
     "dependencyDashboard": true,
